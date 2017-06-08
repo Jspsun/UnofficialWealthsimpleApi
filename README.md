@@ -25,7 +25,7 @@ You will receive a JSON back. Depending on how it goes and how many attempts you
 If successful, the server will respond with:
 ```
 {
-  "Portfolio Value" : AUM // float to two decimals
+  "Portfolio Value" : AUM // string to two decimals
 }
 ```
 
