@@ -28,13 +28,12 @@ class Scraper(object):
 
             # navigate to page behind login
             self.browser.get("https://my.wealthsimple.com/app/portfolio")
-            balanceSpan = self.browser.find_element_by_css_selector(
-                ".value.ng-binding")
+            balanceSpan = self.browser.find_element_by_css_selector(".value.ng-binding")
 
             if balanceSpan.text == "":
                 return self.getBalance(username, password, attemptsLeft - 1)
-
-            return '$' + balanceSpan.text
+            temp = balanceSpan.text.replace(',', '')
+            return temp
         except:
             print "caught exception"
             return self.getBalance(username, password, attemptsLeft - 1)
