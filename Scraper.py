@@ -7,12 +7,10 @@ class Scraper(object):
     def __init__(self):
         # replace with .Firefox(), or with the browser of your choice
         self.browser = webdriver.Chrome()
-        self.browser.implicitly_wait(15)
-        self.depth = 0
+        self.browser.implicitly_wait(10)
 
-    def getBalance(self, username, password):
-        self.depth += 1
-        if self.depth >= 3:
+    def getBalance(self, username, password, attemptsLeft):
+        if attemptsLeft <= 0:
             return None
         try:
             # navigate to the page
@@ -34,15 +32,14 @@ class Scraper(object):
                 ".value.ng-binding")
 
             if balanceSpan.text == "":
-                return self.getBalance(username, password)
+                return self.getBalance(username, password, attemptsLeft - 1)
 
             return '$' + balanceSpan.text
         except:
             print "caught exception"
-            return self.getBalance(username, password)
+            return self.getBalance(username, password, attemptsLeft - 1)
 
     def cleanup(self):
-        self.depth = 0
         self.browser.quit()
 
 # if __name__ == "__main__":
