@@ -9,13 +9,16 @@ num = 0
 for i in range(50):
     start = time.time()
 
-    p = {"email": Config.User, "password": Config.Pass}
+    p = {"email": Config.User, "password": Config.Pass, "attempts": 5}
     r = requests.get("http://localhost:1337/", json=p)
-    data = r.json()
-    print data,
+    data = json.loads(json.dumps(r.json()))
+    if 'error' not in data:
+        print str(i) + " " + data["Portfolio Value"],
 
-    delta = time.time() - start
-    print delta,
-    total += delta
-    num += 1
-    print "Average: " + str(total / num)
+        delta = time.time() - start
+        print delta,
+        total += delta
+        num += 1
+        print "Average: " + str(total / num)
+    else:
+        print str(i) + " " + data["error"]
