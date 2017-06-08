@@ -13,7 +13,7 @@ for i in range(50):
     r = requests.get("http://localhost:1337/", json=p)
     data = json.loads(json.dumps(r.json()))
     if 'error' not in data:
-        print str(i) + " " + data["Portfolio Value"],
+        print str(i) + " " + str(data["Portfolio Value"]),
 
         delta = time.time() - start
         print delta,
