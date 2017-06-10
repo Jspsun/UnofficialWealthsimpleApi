@@ -20,7 +20,7 @@ Here's what it should look like
 }
 ```
 
-You will receive a JSON back. Depending on how it goes and how many attempts you posted for, it can take anywhere from 10-40 seconds (actually loading the page takes so long). On average, it takes me about 15 seconds to receive a response.
+You will receive a JSON back. Depending on how it goes and how many attempts you posted for, it can take anywhere from 2-10 seconds (actually loading the page takes so long). On average, it takes me about 8 seconds to receive a response.
 
 If successful, the server will respond with:
 ```

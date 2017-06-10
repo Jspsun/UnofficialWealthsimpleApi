@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 
 # Post a json to flask server
-S = ""
 
 
 @app.route('/', methods=['Post', 'Get'])
@@ -22,10 +21,10 @@ def api_root():
     if not('email' in data and 'password' in data and 'attempts' in data):
         return "Please post valid JSON"
 
-    S = Scraper()
-    portfolioValue = S.getBalance(
+    s = Scraper()
+    portfolioValue = s.getBalance(
         data['email'], data['password'], data['attempts'])
-    S.cleanup()
+    s.cleanup()
 
     if not portfolioValue:
         return json.dumps({"error": "error. Servers Unresponsive. Check your log in info"}), 500

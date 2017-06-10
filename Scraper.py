@@ -7,7 +7,7 @@ class Scraper(object):
     def __init__(self):
         # replace with .Firefox(), or with the browser of your choice
         self.browser = webdriver.Chrome()
-        self.browser.implicitly_wait(10)
+        self.browser.implicitly_wait(5)
 
     def getBalance(self, username, password, attemptsLeft):
         if attemptsLeft <= 0:
@@ -27,7 +27,6 @@ class Scraper(object):
             submitButton.click()
 
             # navigate to page behind login
-            self.browser.get("https://my.wealthsimple.com/app/portfolio")
             balanceSpan = self.browser.find_element_by_css_selector(".value.ng-binding")
 
             if balanceSpan.text == "":
