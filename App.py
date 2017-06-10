@@ -21,10 +21,10 @@ def api_root():
     if not('email' in data and 'password' in data and 'attempts' in data):
         return "Please post valid JSON"
 
-    s = Scraper()
-    portfolioValue = s.getBalance(
+    S = Scraper()
+    portfolioValue = S.getBalance(
         data['email'], data['password'], data['attempts'])
-    s.cleanup()
+    S.cleanup()
 
     if not portfolioValue:
         return json.dumps({"error": "error. Servers Unresponsive. Check your log in info"}), 500
