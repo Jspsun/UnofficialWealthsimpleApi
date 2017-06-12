@@ -9,7 +9,7 @@ class Scraper(object):
         # self.browser = webdriver.Chrome()
 
         if os.getenv('GOOGLE_CHROME_SHIM'):
-            self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM']+"/chromedriver.exe")
+            self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM'])
         else:
             self.browser = webdriver.Chrome()
 
