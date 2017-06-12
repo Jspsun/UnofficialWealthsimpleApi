@@ -8,10 +8,11 @@ class Scraper(object):
         # self.browser = webdriver.Chrome('/app/.apt/usr/bin/google-chrome')
         # self.browser = webdriver.Chrome()
 
-        if os.getenv('GOOGLE_CHROME_SHIM'):
-            self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM'])
-        else:
-            self.browser = webdriver.Chrome()
+        # if os.getenv('GOOGLE_CHROME_SHIM'):
+        #     self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM'])
+        # else:
+        #     self.browser = webdriver.Chrome()
+        self.browser = webdriver.PhantomJS()
 
         self.browser.implicitly_wait(30)
 
