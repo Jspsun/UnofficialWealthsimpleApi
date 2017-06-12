@@ -8,8 +8,8 @@ class Scraper(object):
         # self.browser = webdriver.Chrome('/app/.apt/usr/bin/google-chrome')
         # self.browser = webdriver.Chrome()
 
-        if os.getenv('GOOGLE_CHROME_SHIM'):
-            self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM'])
+        if os.getenv('GOOGLE_CHROME_BIN'):
+            self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_BIN'])
         else:
             self.browser = webdriver.Chrome()
 
