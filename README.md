@@ -30,7 +30,7 @@ If successful, the server will respond with:
 }
 ```
 
-If unsuccessful, the server will respond with and throw an error code of 500:
+If unsuccessful, the server will throw an error code of 500 and respond with:
 ```
 {
   "error" : "error. Servers Unresponsive. Check your log in info"
