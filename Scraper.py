@@ -5,10 +5,11 @@ class Scraper(object):
 
     def __init__(self):
 
-        if os.getenv('GOOGLE_CHROME_SHIM'):
-            self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM'] + "-stable")
-        else:
-            self.browser = webdriver.Chrome()
+        self.browser = webdriver.Chrome('/app/.apt/usr/bin/google-chrome')
+        # if os.getenv('GOOGLE_CHROME_SHIM'):
+        #     self.browser = webdriver.Chrome(os.environ['GOOGLE_CHROME_SHIM'])
+        # else:
+        #     self.browser = webdriver.Chrome()
 
         self.browser.implicitly_wait(5)
 
