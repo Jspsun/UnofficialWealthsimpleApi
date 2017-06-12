@@ -1,15 +1,14 @@
 from selenium import webdriver
-
+import os
 
 class Scraper(object):
 
     def __init__(self):
 
-        # enable for heroku deploy
-        self.browser = webdriver.Chrome('app/.apt/usr/bin/google-chrome')
-
-        # enable for testing
-        # self.browser = webdriver.Chrome()
+        if os.environp['GOOGLE_CHROME_SHIM']:
+            self.browser = webdriver.Chrome(os.environp['GOOGLE_CHROME_SHIM'])
+        else:
+            self.browser = webdriver.Chrome()
 
         self.browser.implicitly_wait(5)
 
