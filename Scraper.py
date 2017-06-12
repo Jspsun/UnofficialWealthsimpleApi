@@ -5,6 +5,7 @@ import Config
 class Scraper(object):
 
     def __init__(self):
+        print "test-----------------------------------------------"
         # replace with .Firefox(), or with the browser of your choice
         self.browser = webdriver.Chrome()
         self.browser.implicitly_wait(5)
