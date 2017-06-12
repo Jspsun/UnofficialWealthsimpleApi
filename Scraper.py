@@ -13,7 +13,7 @@ class Scraper(object):
         else:
             self.browser = webdriver.Chrome()
 
-        self.browser.implicitly_wait(5)
+        self.browser.implicitly_wait(30)
 
     def getBalance(self, username, password, attemptsLeft):
         if attemptsLeft <= 0:
