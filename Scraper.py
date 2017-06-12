@@ -4,9 +4,13 @@ from selenium import webdriver
 class Scraper(object):
 
     def __init__(self):
-        print "test-----------------------------------------------"
-        # replace with .Firefox(), or with the browser of your choice
-        self.browser = webdriver.Chrome()
+
+        # enable for heroku deploy
+        self.browser = webdriver.Chrome('app/.apt/usr/bin/google-chrome')
+
+        # enable for testing
+        # self.browser = webdriver.Chrome()
+
         self.browser.implicitly_wait(5)
 
     def getBalance(self, username, password, attemptsLeft):
