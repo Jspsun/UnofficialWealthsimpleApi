@@ -5,7 +5,7 @@ class Scraper(object):
 
     def __init__(self):
 
-        if os.environp['GOOGLE_CHROME_SHIM']:
+        if os.environ['GOOGLE_CHROME_SHIM']:
             self.browser = webdriver.Chrome(os.environp['GOOGLE_CHROME_SHIM'])
         else:
             self.browser = webdriver.Chrome()
