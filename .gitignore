@@ -1,4 +1,5 @@
 *.pyc
 Config.py
-/Tests
 /venv
+/tests
+/.vscode

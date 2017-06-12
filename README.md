@@ -16,7 +16,7 @@ Here's what it should look like
 {
   "email" : YOUR_EMAIL,
   "password" : YOUR_PASSWORD,
-  "attempts" : NO_OF_ATTEMPTS  // The integer number of log-in attempts you want the scraper to do before it throws an error (I recommend 5)
+  "attempts" : NO_OF_ATTEMPTS  // The integer number of log-in attempts you want the scraper to do before it throws an error (I recommend 3)
 }
 ```
 

@@ -1,5 +1,4 @@
 from selenium import webdriver
-import Config
 
 
 class Scraper(object):
