@@ -3,3 +3,4 @@ Config.py
 /venv
 /Tests
 /.vscode
+ghostdriver.log
