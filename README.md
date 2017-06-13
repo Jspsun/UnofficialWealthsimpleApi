@@ -9,8 +9,10 @@ I was working on a personal project and wanted to be able to see my current Weal
 - I then parsed and fetched my current AUM
 - After that, I built the scraper into a REST API and deployed it on heroku 
 
+---
+
 ### Using the API
-Submit a JSON to the server at [https://unofficialwealthsimpleapi.herokuapp.com/](https://unofficialwealthsimpleapi.herokuapp.com/)
+Submit a JSON to the server at [https://unofficialwealthsimpleapi.herokuapp.com/](https://unofficialwealthsimpleapi.herokuapp.com/)   
 Here's what it should look like
 ```
 {
