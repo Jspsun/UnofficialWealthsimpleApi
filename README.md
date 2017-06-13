@@ -4,13 +4,13 @@ I was working on a personal project and wanted to be able to see my current Weal
 
 ### How I did it:
 - At first I tried regular webscraping with beautiful soup. It worked...until I realized that the site is rendered with JS. Good choice on them but oh boy did it make my job difficult 👍
-- After that, I started using Selenium to actually open an instance of chrome and wait for the JS to render the DOM elements
+- After that, I started using Selenium to actually open an instance of a webrowser (I used phantomJS) and wait for the JS to render the DOM elements
 - I found identifiers for each element that I needed to interact with (ie. css classes, form names etc.). Using the identifiers, I was able to enter data and click buttons that I needed to
 - I then parsed and fetched my current AUM
-- After that, I built the scraper into a REST API and deployed it on AWS
+- After that, I built the scraper into a REST API and deployed it on heroku 
 
 ### Using the API
-Submit a JSON to the server at (still working on getting a nice url)   
+Submit a JSON to the server at [https://unofficialwealthsimpleapi.herokuapp.com/](https://unofficialwealthsimpleapi.herokuapp.com/)
 Here's what it should look like
 ```
 {
