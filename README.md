@@ -40,6 +40,8 @@ If unsuccessful, the server will throw an error code of 500 and respond with:
 ```
 
 *P.S This is pretty much just for my own use and I totally get it if using some random person's API is sketchy
+
+---
    
 ## Things I've made with the API
 - (Wealthsimple Smart Watch Face) [https://github.com/Jspsun/WealthsimpleWear]
