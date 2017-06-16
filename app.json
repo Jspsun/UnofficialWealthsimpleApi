@@ -1,0 +1,7 @@
+{
+  "name": "WealthsimpleAPI",
+  "description": "A proof of concept Wealthsimple API",
+  "repository": "https://github.com/Jspsun/UnofficialWealthsimpleApi",
+  "logo": "https://www.wealthsimple.com/images/header/logo-6d3513aa.svg",
+  "keywords": ["Wealthsimple", "flask", "selenium"]
+}
