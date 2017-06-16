@@ -1,4 +1,5 @@
 # An Unofficial Wealthsimple API
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)   [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 I was working on a personal project and wanted to be able to see my current Wealthsimple AUM. Unfortunately there isn't an official API to grab this data so I figured that I might as well try my own hand at it. By the end I had made a pretty "interesting" REST API.
 
@@ -28,7 +29,7 @@ You will receive a JSON back. Depending on how it goes and how many attempts you
 If successful, the server will respond with:
 ```
 {
-  "Portfolio Value" : AUM // string to two decimals
+  "Portfolio Value" : AUM // String to two decimals
 }
 ```
 
